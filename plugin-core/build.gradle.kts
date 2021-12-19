@@ -1,0 +1,24 @@
+plugins {
+    java
+}
+
+
+repositories {
+    mavenCentral()
+    maven(url = "https://papermc.io/repo/repository/maven-public/")
+}
+
+dependencies {
+
+    implementation(project(":plugin-api"))
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    implementation("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
+}
+
+
+tasks.getByName<Test>("test") {
+    useJUnitPlatform()
+}

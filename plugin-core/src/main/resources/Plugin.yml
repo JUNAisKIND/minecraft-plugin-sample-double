@@ -1,0 +1,8 @@
+name: plugin-core
+main: com.github.junaiskind.plugin.PluginCore
+version: 1.0.0
+api-version: 1.17
+author: JUNAisKIND
+description: This plugin works for ""
+depend:
+  - plugin-api
